@@ -7,6 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hahah</h1>
+    <h1 id="h1">hahah</h1>
+    <div id="app">
+        {{ msg }}
+    </div>
+
+    <script src="./lib/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('#h1').html('哈哈哈哈哈');
+        })
+    </script>
 <script type="text/javascript" src="bundle.js"></script></body>
 </html>
