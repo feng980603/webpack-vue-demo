@@ -17,6 +17,28 @@ module.exports = {
         filename:'bundle.js',
     },
 
+    module:{
+        //定义加载器的规则
+        rules:[
+            {
+                test:/\.css$/,//找到匹配的文件模块
+                //这里加载器的顺序要倒着写
+                use:[
+                    'style-loader',
+                    'css-loader'
+                ]
+            },
+            {
+                test:/\.scss$/,
+                use:[
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader',
+                ]
+            }
+        ]
+    },
+
     //插件
     plugins:[
         new HtmlWebpackPlugin({
